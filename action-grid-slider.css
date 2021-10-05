@@ -1,16 +1,26 @@
+:root {
+	--first-color: #c9916b;
+	--second-color: #ffffff;
+	--third--color: #d6dad8;
+	--fourth--color:#262d29;
+}
+
+:root {
+	--Header-content : #e2ae8c;
+	--wrapper-background: #fff;
+	--images-icons-background: #c9916b;
+}
+
 .ct-box-slider{
 	margin-right: 0;
 }
-.image_size_slider{
 
-	width: 35vw;
-	height: 52vh;
-}
 .col-xs-6{
 	position: relative;
 	min-height: 1px;
 	padding-right: 15px;
 	padding-left: 0;
+	overflow: hidden;
 }
 .media_query_ipad{
 	display: none;
@@ -34,6 +44,49 @@ button{
 	position:absolute;top:25%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%);z-index: 2;
 }
 #ct-js-box-slider--prev{position:absolute;top:25%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%);z-index: 2}
+
+/*########################## Link Image ##################################*/
+.middle-image{
+	transition: .5s ease;
+	opacity: 0;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+.image_size_slider{
+
+	width: 35vw;
+	height: 52vh;
+	opacity: 1;
+	display: block;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+.col-xs-6:hover .middle-image {
+	opacity: 1;
+}
+.col-xs-6 img:hover {
+	transform: scale(1.2);
+	filter: grayscale(20%);
+}
+.icon{
+
+	background-color: rgba(201, 145, 107, 0.7);
+	display: inline-block;
+	margin-left: -3.5px;
+	padding: 2rem;
+	color:  var(--wrapper-background);
+	font-size: 15px;
+
+}
+.icon:hover{
+	background-color: var(--wrapper-background);
+	color: var(--images-icons-background);
+}
 
 @media screen and (max-width: 1277px){
 
@@ -68,6 +121,9 @@ button{
 	#ct-js-box-slider--prev-ipad{position:absolute;top:25%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%);z-index: 2}
 
 }
+
+
+
 @media screen and (max-width: 638px) {
 	.image_size_slider{
 
